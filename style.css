@@ -88,16 +88,26 @@ nav ul li a:hover{
 }*/
 
 
-section div.button-buy {
-    position: absolute;
+section div.contain {
     margin-left: 12vw;
-    margin-top: 50vh;
+    margin-top: 30vh;
+}
+
+section div.text-info {
+    padding-bottom: 50px;
+}
+
+section div.buttons {
+    display: flex;
+}
+
+section div.button-buy {
+    padding-right:20px;
 }
 
 section div.button-learn {
-    position: absolute;
-    margin-left: 20vw;
-    margin-top: 50vh;
+    padding-left:20px;
+
 }
 
 section div a{
@@ -106,6 +116,127 @@ section div a{
     border: white solid 2px;
     text-decoration: none;
 }
+
+
+
+div.all-page {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+}
+
+
+div.login-page {
+    background-color: white;
+    border: 2px solid #888;
+    border-radius: 35px;
+    padding: 20px;
+    margin-top: 20vh;
+    margin-left: 38vw;
+
+    
+
+
+    width: 24vw;
+    height: 60vh;
+}
+
+div.button-box {
+    margin: auto;
+    width: 220px;
+    position: relative;
+    box-shadow: 0 0 20px 9px #ff61241f;
+    border-radius: 30px;
+}
+
+.toggle-btn{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+
+#btn{
+    top:0;
+    left: 0;
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background: linear-gradient(to right, #9356f5, #4d14e8);
+    border-radius: 30px;
+    transition: .5;
+}
+
+.input-group{
+    position: absolute;
+    margin-top: 80px;
+    width: 280px;
+    transition: .5s;
+}
+
+.input-field{
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0 ;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+
+.submit-btn{
+    width: 85%;
+    padding: 10px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right, #9356f5, #4d14e8);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+
+.chech-box{
+    margin: 30px 10px 30px 0;
+}
+
+span{
+    color: #777;
+    font-size: 12px;
+    bottom: 60px;
+    position: absolute;
+}
+
+#login {
+    margin-left: 1vw;
+}
+
+#register {
+    margin-left: 450px;
+}
+
+
+
+
+
+
+.close {
+    cursor: pointer;
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
 
 
 
