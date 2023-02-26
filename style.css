@@ -124,7 +124,7 @@ div.all-page {
     position: absolute;
     top: 0px;
     left: 0px;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.9);
     width: 100%; /* Full width */
     height: 100%; /* Full height */
 }
@@ -135,26 +135,29 @@ div.login-page {
     border: 2px solid #888;
     border-radius: 35px;
     padding: 20px;
-    margin-top: 20vh;
-    margin-left: 38vw;
 
     
+    margin: auto;
+    margin-top: 20vh;
 
-
-    width: 24vw;
+    width: 300px;
     height: 60vh;
+    overflow: hidden;
 }
 
 div.button-box {
     margin: auto;
-    width: 220px;
+    margin-top: 30px;
+    width: 211px;
     position: relative;
     box-shadow: 0 0 20px 9px #ff61241f;
     border-radius: 30px;
 }
 
 .toggle-btn{
+    margin: auto;
     padding: 10px 30px;
+    width: 100px;
     cursor: pointer;
     background: transparent;
     border: 0;
@@ -175,8 +178,7 @@ div.button-box {
 
 .input-group{
     position: absolute;
-    margin-top: 80px;
-    width: 280px;
+    width: 260px;
     transition: .5s;
 }
 
@@ -211,21 +213,23 @@ div.button-box {
 span{
     color: #777;
     font-size: 12px;
-    bottom: 60px;
+    position: relative;
+}
+
+
+
+.login-register {
     position: absolute;
+    display: flex;
 }
 
-#login {
-    margin-left: 1vw;
+#login{
+    left: 20px;
 }
 
-#register {
-    margin-left: 450px;
+#register{
+    left: 340px;
 }
-
-
-
-
 
 
 .close {
