@@ -209,19 +209,45 @@ div.button-box {
 }
 
 .input-group #pass {
-    width: 88%
+    width: 90%
 }
 
-.show-password {
-    margin: auto;
+.pass-field {
+    display: flex;
 }
 
+.action-pass {
+    width: 24px;
+    height: 24px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#hide-pass {
+    position: absolute;
+    cursor: pointer;
+}
+
+#show-pass {
+    position: absolute;
+    cursor: pointer;
+    display: none;
+}
 
 .chech-box{
-    margin: 30px 10px 30px 0;
+    margin: 5px 10px 30px 0;
 }
 
-span{
+div .forgot-pass {
+    text-align: right;
+    cursor: pointer;
+    color: #777;
+    font-size: 12px;
+    position: relative;
+}
+
+span {
     color: #777;
     font-size: 12px;
     position: relative;

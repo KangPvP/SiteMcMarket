@@ -48,9 +48,14 @@
             </div>
             <div class="login-register">
                 <form id="login" class="input-group">
-                    <input tye="text" class="input-field" placeholder="User Id" required>
-                    <input type="Password" id="pass" class="input-field" placeholder="Enter Password" required><img class="show-password" src="./assets/emoji/hide_32px.png" width="24px"> 
-                    <span>Forgot Password ??</span>
+                    <input type="text" class="input-field" placeholder="User Id" required>
+                    <div class="pass-field">
+                        <input type="password" id="pass" class="input-field" placeholder="Enter Password" required>
+                        <div class="action-pass"><img id="hide-pass" src="./assets/emoji/hide_32px.png" onclick="showPass()" width="24px"><img id="show-pass" src="./assets/emoji/eye_32px.png" onclick="hidePass()" width="24px"></div>
+                    </div>
+
+
+                    <div class="forgot-pass">Forgot Password??</div>
                     <input type="checkbox" class="chech-box"><span>Remember Password</span>
                     <button type="submit" class="submit-btn">Log in</button>
 
@@ -78,15 +83,30 @@
             x.style.left = "-400px";
             y.style.left = "20px";
             z.style.left = "110px";
-
-
-
         }
 
         function login(){
             x.style.left = "20px";
             y.style.left = "340px";
             z.style.left = "0px";
+        }
+        
+
+        var imgHide = document.getElementById("hide-pass")
+        var imgShow = document.getElementById("show-pass")
+        var inputPass = document.getElementById("pass")
+
+        function showPass(){
+            inputPass.type = "text"
+            imgHide.style.display = "none";
+            imgShow.style.display = "block";
+
+        }
+
+        function hidePass(){
+            inputPass.type = "password"
+            imgShow.style.display = "none";
+            imgHide.style.display = "block";
         }
 
 
