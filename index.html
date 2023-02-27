@@ -49,7 +49,8 @@
             <div class="login-register">
                 <form id="login" class="input-group">
                     <input tye="text" class="input-field" placeholder="User Id" required>
-                    <input type="text" class="input-field" placeholder="Enter Password" required>
+                    <input type="Password" id="pass" class="input-field" placeholder="Enter Password" required><img class="show-password" src="./assets/emoji/hide_32px.png" width="24px"> 
+                    <span>Forgot Password ??</span>
                     <input type="checkbox" class="chech-box"><span>Remember Password</span>
                     <button type="submit" class="submit-btn">Log in</button>
 
@@ -58,7 +59,7 @@
                 <form id="register" class="input-group">
                     <input tye="text" class="input-field" placeholder="User Id" required>
                     <input type="email" class="input-field" placeholder="Email" required>
-                    <input type="text" class="input-field" placeholder="Enter Password" required>
+                    <input type="Password" class="input-field" placeholder="Enter Password" required>
                     <input type="checkbox" class="chech-box"><span>I agree to the terms & conditions</span>
                     <button type="submit" class="submit-btn">Register</button>
 
@@ -77,6 +78,9 @@
             x.style.left = "-400px";
             y.style.left = "20px";
             z.style.left = "110px";
+
+
+
         }
 
         function login(){
