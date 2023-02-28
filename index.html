@@ -10,9 +10,9 @@
 
     <nav class="mainPanel">
         <ul>
-            <li><a href="https://www.w3schools.com">Home</a></li>
-            <li><a href="https://www.w3schools.com">Launcher</a></li>
-            <li><a href="https://www.w3schools.com">Contact</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Launcher</a></li>
+            <li><a href="#">Contact</a></li>
             <li><a href="#" id="client-area" class="button">Client Area</a></li>
         </ul>
     </nav>
@@ -65,7 +65,7 @@
                     <input tye="text" class="input-field" placeholder="Username" required>
                     <input type="email" class="input-field" placeholder="Email" required>
                     <div class="pass-field">
-                        <input type="Password" id="pass-register"class="input-field" placeholder="Enter Password" required>
+                        <input type="Password" id="pass-register" class="input-field" placeholder="Enter Password" required>
                         <div class="action-pass"><img id="hide-pass-register" src="./assets/emoji/hide_32px.png" onclick="showPassRegister()" width="24px"><img id="show-pass-register" src="./assets/emoji/eye_32px.png" onclick="hidePassRegister()" width="24px"></div>
                     </div>
 
@@ -77,8 +77,7 @@
         </div>
     </div>
 
-    
-    <script type="text/javascript">
+    <script type="text/javascript" >
         var x = document.getElementById("login");
         var y = document.getElementById("register");
         var z = document.getElementById("btn");
@@ -94,7 +93,7 @@
             y.style.left = "340px";
             z.style.left = "0px";
         }
-        
+
         var imgHideLogin = document.getElementById("hide-pass-login")
         var imgShowLogin = document.getElementById("show-pass-login")
         var inputPassLogin = document.getElementById("pass-login")
@@ -133,7 +132,7 @@
 
 
 
-        
+
 
         var divFogotPass = document.getElementById("")
 
@@ -146,30 +145,31 @@
 
         // Get the modal
         var modal = document.getElementById("all-page");
-        
+
         // Get the button that opens the modal
         var btn = document.getElementById("client-area");
-        
+
         // Get the <span> element that closes the modal
         var span = document.getElementsByClassName("close")[0];
-        
+
         // When the user clicks the button, open the modal 
         btn.onclick = function() {
-          modal.style.display = "block";
+        modal.style.display = "block";
         }
-        
+
         // When the user clicks on <span> (x), close the modal
         span.onclick = function() {
-          modal.style.display = "none";
+        modal.style.display = "none";
         }
-        
+
         // When the user clicks anywhere outside of the modal, close it
         window.onclick = function(event) {
-          if (event.target == modal) {
+        if (event.target == modal) {
             modal.style.display = "none";
-          }
+        }
         }
     </script>
+ 
         
 
 </body>

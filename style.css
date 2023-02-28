@@ -139,7 +139,7 @@ div.all-page {
     position: absolute;
     top: 0px;
     left: 0px;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.5);
     width: 100%; /* Full width */
     height: 100%; /* Full height */
 }
@@ -188,9 +188,6 @@ div#login-page div.button-box .toggle-btn{
     position: relative;
 }
 
-.show-password {
-    filter: opacity(1) drop-shadow(0 0 0 black);
-}
 
 #btn {
     top:0;
