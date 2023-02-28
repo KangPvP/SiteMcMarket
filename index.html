@@ -50,8 +50,8 @@
                 <form id="login" class="input-group">
                     <input type="text" class="input-field" placeholder="Username" required>
                     <div class="pass-field">
-                        <input type="password" id="pass" class="input-field" placeholder="Enter Password" required>
-                        <div class="action-pass"><img id="hide-pass" src="./assets/emoji/hide_32px.png" onclick="showPass()" width="24px"><img id="show-pass" src="./assets/emoji/eye_32px.png" onclick="hidePass()" width="24px"></div>
+                        <input type="password" id="pass-login" class="input-field" placeholder="Enter Password" required>
+                        <div class="action-pass"><img id="hide-pass-login" src="./assets/emoji/hide_32px.png" onclick="showPassLogin()" width="24px"><img id="show-pass-login" src="./assets/emoji/eye_32px.png" onclick="hidePassLogin()" width="24px"></div>
                     </div>
 
 
@@ -64,7 +64,11 @@
                 <form id="register" class="input-group">
                     <input tye="text" class="input-field" placeholder="Username" required>
                     <input type="email" class="input-field" placeholder="Email" required>
-                    <input type="Password" class="input-field" placeholder="Enter Password" required>
+                    <div class="pass-field">
+                        <input type="Password" id="pass-register"class="input-field" placeholder="Enter Password" required>
+                        <div class="action-pass"><img id="hide-pass-register" src="./assets/emoji/hide_32px.png" onclick="showPassRegister()" width="24px"><img id="show-pass-register" src="./assets/emoji/eye_32px.png" onclick="hidePassRegister()" width="24px"></div>
+                    </div>
+
                     <input type="checkbox" class="chech-box"><span>I agree to the terms & conditions</span>
                     <button type="submit" class="submit-btn">Register</button>
 
@@ -91,23 +95,45 @@
             z.style.left = "0px";
         }
         
+        var imgHideLogin = document.getElementById("hide-pass-login")
+        var imgShowLogin = document.getElementById("show-pass-login")
+        var inputPassLogin = document.getElementById("pass-login")
 
-        var imgHide = document.getElementById("hide-pass")
-        var imgShow = document.getElementById("show-pass")
-        var inputPass = document.getElementById("pass")
-
-        function showPass(){
-            inputPass.type = "text"
-            imgHide.style.display = "none";
-            imgShow.style.display = "block";
+        function showPassLogin(){
+            inputPassLogin.type = "text"
+            imgHideLogin.style.display = "none";
+            imgShowLogin.style.display = "block";
 
         }
 
-        function hidePass(){
-            inputPass.type = "password"
-            imgShow.style.display = "none";
-            imgHide.style.display = "block";
+        function hidePassLogin(){
+            inputPassLogin.type = "password"
+            imgShowLogin.style.display = "none";
+            imgHideLogin.style.display = "block";
         }
+
+        var imgHideRegister = document.getElementById("hide-pass-register")
+        var imgShowRegister = document.getElementById("show-pass-register")
+        var inputPassRegister = document.getElementById("pass-register")
+
+        function showPassRegister(){
+            inputPassRegister.type = "text"
+            imgHideRegister.style.display = "none";
+            imgShowRegister.style.display = "block";
+
+        }
+
+        function hidePassRegister(){
+            inputPassRegister.type = "password"
+            imgShowRegister.style.display = "none";
+            imgHideRegister.style.display = "block";
+        }
+
+
+
+
+
+        
 
         var divFogotPass = document.getElementById("")
 

@@ -76,15 +76,24 @@ nav ul li a:hover{
 }
 
 section div.contain {
-    margin-left: 12vw;
-    margin-top: 30vh;
+    margin-left: 5vw;
+    margin-top: 22vh;
+
 }
 
 section div.text-info {
-    padding-bottom: 50px;
+    padding-bottom: 5vw;
+}
+
+section div.text-info p{
+    
+    text-decoration: none;
+    color: azure;
+    font-size: 30px;
 }
 
 section div.buttons {
+    margin-left: 8vw;
     display: flex;
 }
 
@@ -111,12 +120,6 @@ section div.buttons .button-type a:hover {
     text-decoration: underline;
     transition: 1s;
     color: pink;
-}
-
-section div.text-info {
-    text-decoration: none;
-    color: aliceblue;
-    font-size: 40px;
 }
 
 
@@ -246,16 +249,28 @@ div.login-register form.input-group .input-field{
     margin-right: 10px;
 }
 
-#hide-pass {
+#hide-pass-login {
     position: absolute;
     cursor: pointer;
 }
 
-#show-pass {
+#show-pass-login {
     position: absolute;
     cursor: pointer;
     display: none;
 }
+
+#hide-pass-register {
+    position: absolute;
+    cursor: pointer;
+}
+
+#show-pass-register {
+    position: absolute;
+    cursor: pointer;
+    display: none;
+}
+
 
 .chech-box{
     margin: 5px 10px 30px 0;
