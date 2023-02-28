@@ -75,19 +75,6 @@ nav ul li a:hover{
     color: pink;
 }
 
-/*nav ul li a:hover{
-    text-decoration: none;
-    font-size: 20px;
-    color: white;
-    
-    padding: 10px;
-    background-color: rgba(128, 128, 128, 0.397);
-
-    
-    border-radius: 20%;
-}*/
-
-
 section div.contain {
     margin-left: 12vw;
     margin-top: 30vh;
@@ -101,21 +88,48 @@ section div.buttons {
     display: flex;
 }
 
-section div.button-buy {
-    padding-right:20px;
+
+section div.buttons .button-type {
+    background: transparent;
+    border: 0;
+    outline: none;
 }
 
-section div.button-learn {
-    padding-left:20px;
-
-}
-
-section div a{
+section div.buttons .button-type a {
     padding: 10px 15px;
     border-radius: 50px;
     border: white solid 2px;
     text-decoration: none;
+    font-size: 20px;
+    color: white;
 }
+
+section div.buttons .button-type a:hover {
+
+    text-decoration: none;
+    font-size: 20px;
+    text-decoration: underline;
+    transition: 1s;
+    color: pink;
+}
+
+section div.text-info {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 40px;
+}
+
+
+
+section button#button-buy {
+    padding-right:20px;
+}
+
+section button#button-learn {
+    padding-left:20px;
+
+}
+
 
 div.all-page {
     display: none;
