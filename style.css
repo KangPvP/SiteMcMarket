@@ -129,8 +129,8 @@ div.all-page {
 
 
 div.login-page {
-    background-color: white;
-    border: 2px solid #888;
+    background-color: rgb(246, 246, 246);
+    border: 2px solid #585858;
     border-radius: 35px;
     padding: 20px;
 
@@ -152,7 +152,15 @@ div.button-box {
     border-radius: 30px;
 }
 
-.toggle-btn{
+div#login-page .close {
+    cursor: pointer;
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+div#login-page div.button-box .toggle-btn{
     margin: auto;
     padding: 10px 30px;
     width: 100px;
@@ -178,20 +186,20 @@ div.button-box {
     transition: .5;
 }
 
-.input-group{
+div.login-register form.input-group{
     position: absolute;
     width: 260px;
     transition: .5s;
 }
 
-.input-field{
+div.login-register form.input-group .input-field{
     width: 100%;
     padding: 10px 0;
     margin: 5px 0;
     border-left: 0;
     border-top: 0 ;
     border-right: 0;
-    border-bottom: 1px solid #999;
+    border-bottom: 1px solid #585858;
     outline: none;
     background: transparent;
 }
@@ -242,14 +250,14 @@ div.button-box {
 div .forgot-pass {
     text-align: right;
     cursor: pointer;
-    color: #777;
+    color: #585858;
     font-size: 12px;
     position: relative;
     
 }
 
 span {
-    color: #777;
+    color: #585858;
     font-size: 12px;
     position: relative;
 }
@@ -267,14 +275,6 @@ span {
     left: 340px;
 }
 
-
-.close {
-    cursor: pointer;
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
 
 
 /*ul.mainPanel {
