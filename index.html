@@ -55,14 +55,14 @@
                     </div>
 
 
-                    <div class="forgot-pass">Forgot Password?</div>
+                    <div id="forgot-pass" class="forgot-pass">Forgot Password ?</div>
                     <input type="checkbox" class="chech-box"><span>Remember Password</span>
                     <button type="submit" class="submit-btn">Log in</button>
 
                 </form>
 
                 <form id="register" class="input-group">
-                    <input tye="text" class="input-field" placeholder="Username" required>
+                    <input type="text" class="input-field" placeholder="Username" required>
                     <input type="email" class="input-field" placeholder="Email" required>
                     <div class="pass-field">
                         <input type="Password" id="pass-register" class="input-field" placeholder="Enter Password" required>
@@ -73,7 +73,49 @@
                     <button type="submit" class="submit-btn">Register</button>
 
                 </form>
+
             </div>
+        </div>
+
+        <div id="pageverif" class="login-page">
+            <span class="close">&times;</span>
+
+            <div id="title-verif" class="title-popup">Verify</div>
+            <div id="text-verif" class="text-popup">Check your adress Email to get a code</div>
+            <form id="rverif" class="input-group popup-group">
+                <input type="text" class="input-field" placeholder="code of verification" maxlength=6 required>
+                <div class="forgot-pass">Re-send a code</div>
+                <div class="error">Error: Your id is NULL</div>
+
+                <button type="submit" class="submit-btn">Continue</button>
+            </form>
+        </div>
+
+        <div id="forgotpass" class="login-page">
+            <span class="close">&times;</span>
+
+            <div id="title-forgot" class="title-popup">Forgot Pass</div>
+            <div id="text-forgot" class="text-popup">Give your email for can change your password </div>
+            <form id="forgot" class="input-group popup-group">
+                <input type="email" class="input-field" placeholder="email" required>
+                <div class="error">Error: Your id is NULL</div>
+
+                <button type="submit" class="submit-btn">Continue</button>
+            </form>
+        </div>
+
+        <div id="newpassword" class="login-page">
+            <span class="close">&times;</span>
+
+            <div id="title-newpass" class="title-popup">Password</div>
+            <div id="text-newpass" class="text-popup">Setup your password</div>
+            <form id="newpass" class="input-group popup-group">
+                <input type="password" class="input-field" placeholder="new password" required>
+                <input type="password" class="input-field" placeholder="confirm password" required>
+                <div class="error">Error: Your id is NULL</div>
+
+                <button type="submit" class="submit-btn">Continue</button>
+            </form>
         </div>
     </div>
 
@@ -128,16 +170,14 @@
             imgHideRegister.style.display = "block";
         }
 
+        var divFogotPassBtn = document.getElementById("forgot-pass")
+        var divFogotPass = document.getElementById("forgotpass")
 
+        var loginpage = document.getElementById("login-page")
 
-
-
-
-
-        var divFogotPass = document.getElementById("")
-
-        function fogotPass(){
-
+        divFogotPassBtn.onclick = function() {
+            loginpage.style.display = "none"
+            divFogotPass.style.display = "block"
         }
 
 
@@ -166,7 +206,7 @@
         window.onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = "none";
-        }
+            }
         }
     </script>
  
