@@ -18,9 +18,9 @@
 
     <section>
         <div class="contain">
-            <div class="text-info"><p>Launcher Custom for your utilisation, <br>with CustomLauncher you can create your minecraft Server Modding</p></div>
+            <div class="text-info"><p>Custom Launchers for your utilisation, <br>with CustomLaunchers you can create your own Modded Minecraft Server</p></div>
             <div class="buttons">
-                <button id="button-buy" class="button-type"><a href="#">BUY Launcher</a></button>
+                <button id="button-buy" class="button-type"><a href="#">Buy a Launcher</a></button>
                 <button id="button-learn" class="button-type"><a href="#">Learn More</a></button> 
             </div>
 
@@ -31,13 +31,13 @@
 
 
     <div id="all-page" class="all-page">
-        <div id="login-page" class="login-page">
-            <span class="close">&times;</span>
+        <div id="loginpage" class="login-page">
+            <span id="close1" class="close">&times;</span>
 
             <div class="button-box">
                 <div id="btn"></div>
-                <button type="button" class="toggle-btn" onclick="login()">Login</button>
-                <button type="button" class="toggle-btn" onclick="register()">Register</button>
+                <button type="button" class="toggle-btn" onclick='blogin()'>Login</button>
+                <button type="button" class="toggle-btn" onclick='bregister()'>Register</button>
             </div>
 
             <div class="social-icons">
@@ -56,7 +56,7 @@
 
                     <div id="forgot-pass" class="forgot-pass">Forgot Password ?</div>
                     <input type="checkbox" class="chech-box"><span>Remember Password</span>
-                    <button type="submit" class="submit-btn">Log in</button>
+                    <button id="submit0" type="submit" class="submit-btn" onclick="login('arka.off@gmail.com','TestMdp123')">Log in</button>
 
                 </form>
 
@@ -69,7 +69,7 @@
                     </div>
 
                     <input type="checkbox" class="chech-box"><span>I agree to the terms & conditions</span>
-                    <button type="submit" class="submit-btn">Register</button>
+                    <button id="submit1" type="submit" class="submit-btn">Register</button>
 
                 </form>
 
@@ -77,7 +77,7 @@
         </div>
 
         <div id="pageverif" class="login-page">
-            <span class="close">&times;</span>
+            <span id="close2" class="close" onclick="close2()">&times;</span>
 
             <div id="title-verif" class="title-popup">Verify</div>
             <div id="text-verif" class="text-popup">Check your adress Email to get a code</div>
@@ -86,25 +86,25 @@
                 <div class="forgot-pass">Re-send a code</div>
                 <div class="error">Error: Your id is NULL</div>
 
-                <button type="submit" class="submit-btn">Continue</button>
+                <button id="submit2" type="submit" class="submit-btn">Continue</button>
             </form>
         </div>
 
         <div id="forgotpass" class="login-page">
-            <span class="close">&times;</span>
+            <span id="close3" class="close" onclick="close3()">&times;</span>
 
             <div id="title-forgot" class="title-popup">Forgot Pass</div>
             <div id="text-forgot" class="text-popup">Give your email for can change your password </div>
-            <form id="forgot" class="input-group popup-group">
+            <form id="forgot" class="input-group popup-group" onsubmit="submit3Click()">
                 <input type="email" class="input-field" placeholder="email" required>
                 <div class="error">Error: Your id is NULL</div>
 
-                <button type="submit" class="submit-btn">Continue</button>
+                <button id="submit3" type="submit" class="submit-btn">Continue</button>
             </form>
         </div>
 
         <div id="newpassword" class="login-page">
-            <span class="close">&times;</span>
+            <span id="close4" class="close">&times;</span>
 
             <div id="title-newpass" class="title-popup">Password</div>
             <div id="text-newpass" class="text-popup">Setup your password</div>
@@ -113,12 +113,13 @@
                 <input type="password" class="input-field" placeholder="confirm password" required>
                 <div class="error">Error: Your id is NULL</div>
 
-                <button type="submit" class="submit-btn">Continue</button>
+                <button id="submit4" type="submit" class="submit-btn">Continue</button>
             </form>
         </div>
     </div>
     
     <script type="text/javascript" src="./pages/js/script.js"></script>
+    <script type="text/javascript" src="./pages/js/requests.js"></script>
 
 </body>
 

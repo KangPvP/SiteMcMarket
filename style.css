@@ -171,7 +171,7 @@ div.button-box {
     font-weight: bold;
 }
 
-div#login-page div.button-box .toggle-btn{
+div#loginpage div.button-box .toggle-btn{
     margin: auto;
     padding: 10px 30px;
     width: 100px;
@@ -308,11 +308,11 @@ span {
 /* Verife Popup + ForgotPass Popup */
 
 #pageverif{
-
+    display: none;
 }
 
 #forgotpass{
-
+    display: none;
 }
 
 div.login-page .title-popup {
