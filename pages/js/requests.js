@@ -31,3 +31,12 @@ async function register(pseudo, email, password) {
     })
     return request.json() 
 }
+
+async function codeVerif(code) {
+    let request = await fetch(url + 'users/code', {
+        method: 'GET',
+        headers: {
+            "Content-Type": "application/json"
+        }
+    })
+}
