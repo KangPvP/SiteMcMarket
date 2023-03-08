@@ -46,7 +46,7 @@
                 <img src="" alt="">
             </div>
             <div class="login-register">
-                <form id="login" class="input-group">
+                <form id="login" class="input-group" onsubmit="login('arka.off@gmail.com','TestMdp123')">
                     <input type="text" class="input-field" placeholder="Username" required>
                     <div class="pass-field">
                         <input type="password" id="pass-login" class="input-field" placeholder="Enter Password" required>
@@ -56,7 +56,7 @@
 
                     <div id="forgot-pass" class="forgot-pass">Forgot Password ?</div>
                     <input type="checkbox" class="chech-box"><span>Remember Password</span>
-                    <button id="submit0" type="submit" class="submit-btn" onclick="login('arka.off@gmail.com','TestMdp123')">Log in</button>
+                    <button id="submit0" type="submit" class="submit-btn">Log in</button>
 
                 </form>
 
@@ -81,10 +81,10 @@
 
             <div id="title-verif" class="title-popup">Verify</div>
             <div id="text-verif" class="text-popup">Check your adress Email to get a code</div>
-            <form id="rverif" class="input-group popup-group">
+            <form id="rverif" class="input-group popup-group" onsubmit="submit2Click('dsfdsf')">
                 <input type="text" class="input-field" placeholder="code of verification" maxlength=6 required>
                 <div class="forgot-pass">Re-send a code</div>
-                <div class="error">Error: Your id is NULL</div>
+                <div id="errorMsg2" class="error">Error: Code False</div>
 
                 <button id="submit2" type="submit" class="submit-btn">Continue</button>
             </form>

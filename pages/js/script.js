@@ -79,6 +79,7 @@ registerBtn.onclick = function() {
 
 // Element Verif Page 2
 let pageverif = document.getElementById("pageverif")
+let errorMsg2 = document.getElementById("errorMsg2")
 
 
 // Element ForgotPass Page 3
@@ -104,6 +105,14 @@ function close2() {
     pageverif.style.display = "none"  //Close subPage min
     loginpage.style.display = "block"   //Open subPage main
     modal.style.display = "none";   //Close subPage
+}
+
+function submit2Click(code){
+    if(code == "0"){
+
+    } else{
+        errorMsg2.style.display = "block"
+    }
 }
 
 
