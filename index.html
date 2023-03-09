@@ -60,11 +60,11 @@
 
                 </form>
 
-                <form id="register" class="input-group">
-                    <input type="text" class="input-field" placeholder="Username" required>
-                    <input type="email" class="input-field" placeholder="Email" required>
+                <form id="register" class="input-group" onsubmit="register('dfs','dfs@fds','pass')">
+                    <input id="user-register" type="text" class="input-field" placeholder="Username" required>
+                    <input id="email-register" type="email" class="input-field" placeholder="Email" required>
                     <div class="pass-field">
-                        <input type="Password" id="pass-register" class="input-field" placeholder="Enter Password" required>
+                        <input id="pass-register" type="Password" class="input-field" placeholder="Enter Password" required>
                         <div class="action-pass"><img id="hide-pass-register" src="./assets/emoji/hide_32px.png" onclick="showPassRegister()" width="24px"><img id="show-pass-register" src="./assets/emoji/eye_32px.png" onclick="hidePassRegister()" width="24px"></div>
                     </div>
 
@@ -81,8 +81,8 @@
 
             <div id="title-verif" class="title-popup">Verify</div>
             <div id="text-verif" class="text-popup">Check your adress Email to get a code</div>
-            <form id="rverif" class="input-group popup-group" onsubmit="submit2Click('dsfdsf')">
-                <input type="text" class="input-field" placeholder="code of verification" maxlength=6 required>
+            <form id="rverif" class="input-group popup-group" onsubmit="submit2Click()">
+                <input id="code2" type="text" class="input-field" placeholder="code of verification" maxlength=6 required>
                 <div class="forgot-pass">Re-send a code</div>
                 <div id="errorMsg2" class="error">Error: Code False</div>
 

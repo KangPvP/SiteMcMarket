@@ -100,6 +100,19 @@ divFogotPassBtn.onclick = function() {
     divFogotPass.style.display = "block"
 }
 
+
+function submit1Click(){
+    let user = document.getElementById('user-register').value; 
+    let email = document.getElementById('email-register').value;
+    let pass = document.getElementById('pass-register').value;
+
+    console.log("test")
+    
+    register(user, email, pass)
+
+
+}
+
 //Function Page 3
 function close2() {
     pageverif.style.display = "none"  //Close subPage min
@@ -107,14 +120,15 @@ function close2() {
     modal.style.display = "none";   //Close subPage
 }
 
-function submit2Click(code){
-    if(code == "0"){
+function submit2Click(){
+    let code2 = document.getElementById('code2').value; 
+
+    if(code2 == "000000"){
 
     } else{
         errorMsg2.style.display = "block"
     }
 }
-
 
 //Function Page 3
 function close3() {

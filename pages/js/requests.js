@@ -18,18 +18,19 @@ async function login(email, password) {
 }
 
 async function register(pseudo, email, password) {
+    const formData = { "pseudo": pseudo, "email": email, "password": password}
+    console.log(formData)
+    
     let request = await fetch(url + 'users/register', {
         method: 'POST',
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify({
-            "pseudo": pseudo,
-            "email": email,
-            "password": password
-        })
+        body: JSON.stringify(formData)
     })
-    return request.json() 
+    let reqjson = await request.json()
+    console.log(reqjson)
+    return reqjson
 }
 
 async function codeVerif(code) {
