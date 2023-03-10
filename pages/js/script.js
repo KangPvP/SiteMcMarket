@@ -87,7 +87,7 @@ let divFogotPass = document.getElementById("forgotpass")
 
 
 
-let close4 = document.getElementById("close4");  //Newpassword Page
+let close4 = document.getElementById("close4");  //Newpassword Pages
 
 
 //Function Page 1
