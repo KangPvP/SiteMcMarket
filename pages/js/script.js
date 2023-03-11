@@ -107,10 +107,8 @@ function submit1Click(){
     let pass = document.getElementById('pass-register').value;
 
     console.log("test")
-    
-    register(user, email, pass)
 
-
+    register(user,email,pass)
 }
 
 //Function Page 3
