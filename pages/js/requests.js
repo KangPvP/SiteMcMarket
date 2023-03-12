@@ -12,10 +12,10 @@ async function login(email, password) {
         },
         body: JSON.stringify(formData)
     })
-    let reqjson = await request.json()
-    console.log(reqjson)
-    return reqjson
+    
+    return request
 }
+
 
 async function register(pseudo, email, password) {
     const formData = { "pseudo": pseudo, "email": email, "password": password}
@@ -28,9 +28,8 @@ async function register(pseudo, email, password) {
         },
         body: JSON.stringify(formData)
     })
-    let reqjson = await request.json()
-    console.log(reqjson)
-    return reqjson
+
+    return request
 }
 
 async function codeVerif(code) {

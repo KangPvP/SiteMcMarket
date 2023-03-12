@@ -68,9 +68,10 @@ let close1 = document.getElementById("close1");
 let divFogotPassBtn = document.getElementById("forgot-pass")
 
 let loginBtn = document.getElementById("submit0")
+let errorMsg0 = document.getElementById("errorMsg0")
+
 let registerBtn = document.getElementById("submit1")
-
-
+let errorMsg1 = document.getElementById("errorMsg1")
 
 registerBtn.onclick = function() {
     //Register Request
@@ -93,6 +94,7 @@ let close4 = document.getElementById("close4");  //Newpassword Pages
 //Function Page 1
 close1.onclick = function() {
     modal.style.display = "none";
+    errorMsg1.style.display = "none"
 }
 
 divFogotPassBtn.onclick = function() {
@@ -101,14 +103,24 @@ divFogotPassBtn.onclick = function() {
 }
 
 
-function submit1Click(){
+async function submit1Click(){
     let user = document.getElementById('user-register').value; 
     let email = document.getElementById('email-register').value;
     let pass = document.getElementById('pass-register').value;
 
     console.log("test")
 
-    register(user,email,pass)
+    let res = await register(user,email,pass)
+    
+
+    if(res.status == 201 ){
+        loginpage.style.display = "none"
+        pageverif.style.display = "block"
+        errorMsg1.style.display = "none"
+    } else {
+        errorMsg1.style.display = "block"
+    }
+
 }
 
 //Function Page 3
