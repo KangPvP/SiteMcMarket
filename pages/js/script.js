@@ -114,6 +114,7 @@ async function submit1Click(){
     
 
     if(res.status == 201 ){
+        localStorage.setItem("name", "Chris");
         loginpage.style.display = "none"
         pageverif.style.display = "block"
         errorMsg1.style.display = "none"
@@ -131,10 +132,12 @@ function close2() {
 }
 
 function submit2Click(){
-    let code2 = document.getElementById('code2').value; 
+    let code2 = document.getElementById('code2').value;
+
+    console.log(localStorage.getItem("name"))
 
     if(code2 == "000000"){
-
+        
     } else{
         errorMsg2.style.display = "block"
     }
