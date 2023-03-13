@@ -112,6 +112,7 @@ async function submit1Click(){
 
     let res = await register(user,email,pass)
     
+    console.log(res)
 
     if(res.status == 201 ){
         localStorage.setItem("name", "Chris");
