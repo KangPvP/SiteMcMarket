@@ -103,19 +103,36 @@ divFogotPassBtn.onclick = function() {
 }
 
 
+async function submit0Click(){
+    let email = document.getElementById('email-login').value;
+    let pass = document.getElementById('pass-login').value;
+
+    let res = await register(user,email,pass)
+    let userId = await res.json()
+
+    if(res.status == 201 ){
+        localStorage.setItem("userId", userId);
+        loginpage.style.display = "none"
+        pageverif.style.display = "block"
+        errorMsg1.style.display = "none"
+    } else {
+        errorMsg1.style.display = "block"
+    }
+
+}
+
 async function submit1Click(){
     let user = document.getElementById('user-register').value; 
     let email = document.getElementById('email-register').value;
     let pass = document.getElementById('pass-register').value;
 
-    console.log("test")
-
     let res = await register(user,email,pass)
-    
-    console.log(res)
+    let resJson = await res.json()
+
+    console.log(resJson)
 
     if(res.status == 201 ){
-        localStorage.setItem("name", "Chris");
+        localStorage.setItem("userId", resJson.id);
         loginpage.style.display = "none"
         pageverif.style.display = "block"
         errorMsg1.style.display = "none"
@@ -135,11 +152,12 @@ function close2() {
 function submit2Click(){
     let code2 = document.getElementById('code2').value;
 
-    console.log(localStorage.getItem("name"))
+    let userId = localStorage.getItem("userId")
+    let res = verifyCode(userId, code2);
 
-    if(code2 == "000000"){
-        
-    } else{
+    if(res.status == 201){
+        console.log("Bravo Vous etes co")
+    } else {
         errorMsg2.style.display = "block"
     }
 }
@@ -155,7 +173,6 @@ function submit3Click(){
     divFogotPass.style.display = "none"
     pageverif.style.display = "block"
 }
-
 
 close4.onclick = function() {
     modal.style.display = "none";

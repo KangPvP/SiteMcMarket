@@ -19,7 +19,6 @@ async function login(email, password) {
 
 async function register(pseudo, email, password) {
     const formData = { "pseudo": pseudo, "email": email, "password": password}
-    console.log(formData)
     
     let request = await fetch(url + 'users/register', {
         method: 'POST',
@@ -32,11 +31,15 @@ async function register(pseudo, email, password) {
     return request
 }
 
-async function codeVerif(code) {
-    let request = await fetch(url + 'users/code', {
-        method: 'GET',
+async function verifyCode(id, code) {
+    const formData = { "idUser": id, "code": code}
+
+    let request = await fetch(url + 'users/' + id + '/verification', {
+        method: 'PATCH',
         headers: {
             "Content-Type": "application/json"
-        }
+        },
+        body: JSON.stringify(formData)
     })
+    return request
 }
