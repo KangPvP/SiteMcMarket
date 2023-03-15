@@ -18,28 +18,31 @@ async function login(email, password) {
 
 
 async function register(pseudo, email, password) {
-    const formData = { "pseudo": pseudo, "email": email, "password": password}
-    
     let request = await fetch(url + 'users/register', {
         method: 'POST',
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify({
+            "pseudo": pseudo,
+            "email": email,
+            "password": password
+        })
     })
 
     return request
 }
 
 async function verifyCode(id, code) {
-    const formData = { "idUser": id, "code": code}
 
     let request = await fetch(url + 'users/' + id + '/verification', {
         method: 'PATCH',
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify({
+            "code": code
+        })
     })
     return request
 }

@@ -315,6 +315,10 @@ span {
     display: none;
 }
 
+#newpassword{
+    display: none;
+}
+
 div.login-page .title-popup {
     font-size: 50px;
     text-align: center;

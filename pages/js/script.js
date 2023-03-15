@@ -107,10 +107,15 @@ async function submit0Click(){
     let email = document.getElementById('email-login').value;
     let pass = document.getElementById('pass-login').value;
 
-    let res = await register(user,email,pass)
+    let res = await login(email,pass)
     let userId = await res.json()
 
-    if(res.status == 201 ){
+    if(res.status == 202 ){
+        localStorage.setItem("userId", userId);
+        console.log("Votre compte est verifé")
+    } else if (res.status == 204 ){
+        console.log("Votre compte n'est pas verifé")
+
         localStorage.setItem("userId", userId);
         loginpage.style.display = "none"
         pageverif.style.display = "block"
@@ -153,9 +158,10 @@ function submit2Click(){
     let code2 = document.getElementById('code2').value;
 
     let userId = localStorage.getItem("userId")
+    console.log(userId)
     let res = verifyCode(userId, code2);
 
-    if(res.status == 201){
+    if(res.status == 200){
         console.log("Bravo Vous etes co")
     } else {
         errorMsg2.style.display = "block"
