@@ -107,16 +107,19 @@ async function submit0Click(){
     let email = document.getElementById('email-login').value;
     let pass = document.getElementById('pass-login').value;
 
+    console.log(email, pass)
+
     let res = await login(email,pass)
     let userId = await res.json()
 
-    if(res.status == 202 ){
+    if(res.status == 200 ){
         localStorage.setItem("userId", userId);
         console.log("Votre compte est verifé")
-    } else if (res.status == 204 ){
+    } else if (res.status == 202 ){
         console.log("Votre compte n'est pas verifé")
 
         localStorage.setItem("userId", userId);
+        errorMsg1.style.display = "none"
         loginpage.style.display = "none"
         pageverif.style.display = "block"
         errorMsg1.style.display = "none"
@@ -149,19 +152,21 @@ async function submit1Click(){
 
 //Function Page 3
 function close2() {
+    errorMsg2.style.display = "none" //Display None MessageError
     pageverif.style.display = "none"  //Close subPage min
     loginpage.style.display = "block"   //Open subPage main
     modal.style.display = "none";   //Close subPage
 }
 
-function submit2Click(){
+async function submit2Click(){
     let code2 = document.getElementById('code2').value;
+    console.log("code : " + code2)
 
     let userId = localStorage.getItem("userId")
     console.log(userId)
-    let res = verifyCode(userId, code2);
-
-    if(res.status == 200){
+    let res = await verifyCode(userId, code2);
+    console.log(await res.json())
+    if (res.status == 200) {
         console.log("Bravo Vous etes co")
     } else {
         errorMsg2.style.display = "block"

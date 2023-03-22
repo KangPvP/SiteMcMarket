@@ -36,7 +36,7 @@ async function register(pseudo, email, password) {
 async function verifyCode(id, code) {
 
     let request = await fetch(url + 'users/' + id + '/verification', {
-        method: 'PATCH',
+        method: 'POST',
         headers: {
             "Content-Type": "application/json"
         },
